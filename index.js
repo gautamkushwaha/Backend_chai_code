@@ -5,7 +5,7 @@ const express = require("express")
 
 const app = express()
 
-const PORT = 4008
+const PORT = process.env.PORT || 4008 
 
 const githubData = {
     "login": "gautamkushwaha",
@@ -63,6 +63,6 @@ app.get('/sigup',(req, res)=>{
 })
 
 
-app.listen(process.env.PORT, ()=>{
+app.listen(PORT, ()=>{
     console.log(`server is running on port ${PORT}`)
 })
